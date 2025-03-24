@@ -1,0 +1,49 @@
+step 3:
+\documentclass{article}
+
+\begin{document}
+
+\section*{Logic Statement with p, q, and r}
+
+\[
+ (p \land q) \rightarrow (r \leftrightarrow \neg p \lor q)
+\]
+
+\end{document}
+```
+}
+
+step 4
+# Define the values of p, q, and r
+p = True
+q = False
+r = True
+
+# Define the logic expression
+logic_statement = ((not p or q) and (q == r)) or (not p)
+
+# Print the result
+print(f"Logic Statement Result for p={p}, q={q}, r={r}: {logic_statement}")
+
+step 5:
+# Importing the pandas library for better table representation
+import pandas as pd
+
+# Define the truth table rows for p and q
+truth_values = [(True, True), (True, False), (False, True), (False, False)]
+
+# Prepare a list to store the rows of the truth table
+table = []
+
+# Generate the truth table
+for p, q in truth_values:
+    not_p = not p
+    not_p_or_q = not p or q
+    p_implies_q = not p or q
+    table.append([p, q, not_p, not_p_or_q, p_implies_q])
+
+# Convert the table to a DataFrame for better formatting
+df = pd.DataFrame(table, columns=["p", "q", "¬p", "¬p ∨ q", "p → q"])
+
+# Print the truth table
+print(df)
