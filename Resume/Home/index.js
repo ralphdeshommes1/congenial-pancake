@@ -1,4 +1,4 @@
-//window.alert("jehu is a simp");   this show an alert in website
+//window.alert("this is an alert and its working");   this show an alert in website
 
 //username = window.prompt("hello what is your name?");
 console.log(`hello ${username}`);
